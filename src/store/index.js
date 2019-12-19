@@ -16,9 +16,6 @@ export default new Vuex.Store({
   mutations: {
     changeStoreTrip (state, value) {
       state.trips[value.key] = value.val
-    },
-    setLoading (state, value) {
-      state.loading = value
-    },
+    }
   }
 })
