@@ -148,7 +148,7 @@ export default {
       const data = encodeURI(csvContent);
       const link = document.createElement("a");
       link.setAttribute("href", data);
-      link.setAttribute("download", "TripData-"+startDate.replace(/:/g, ".").slice(0, -3)+"-"+endDate.replace(/:/g, ".").slice(0, -3)+".csv");
+      link.setAttribute("download", "TripData-"+startDate.replace(/:/g, ".").slice(0, -3)+"---"+endDate.replace(/:/g, ".").slice(0, -3)+".csv");
       link.click();
     }
   }
