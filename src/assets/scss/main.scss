@@ -1,0 +1,139 @@
+.loading{
+  height:100vh;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+.map {
+  width: 100%;
+  height: 25rem;
+  border: 0;
+}
+.trip-stats {
+  margin-top: -4rem;
+
+  ul.timeline {
+    > li {
+      font-weight: 500;
+    }
+  }
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 0 14px 35px 0 rgba(195, 202, 220, 0.29);
+  background-color: #ffffff;
+  border: 0;
+  margin-bottom: 2.125rem;
+}
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 2rem;
+
+  >li {
+    padding: 1rem;
+    padding-bottom: 0;
+    position: relative;
+
+    &:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+      z-index: 1;
+      top: 1.1rem;
+    }
+
+    &:first-child {
+      &:after {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: -11px;
+        top: 1.1rem;
+        width: 2px;
+        height: 100%;
+      }
+    }
+  }
+}
+.trip-total {
+  font-size: 4rem;
+  line-height: .9;
+}
+.white-space-pre {
+  white-space: pre;
+}
+.btn.btn-primary {
+  border: 0;
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #0069d9;
+    box-shadow: 0 5px 10px rgba(61, 63, 79, .2);
+    transform: translateY(-2px);
+    outline: none;
+  }
+}
+.table th {
+  border-top: 0
+}
+
+@media only screen and (max-width: 991.98px) {
+  .responsive-table table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+  }
+ 
+  .responsive-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .responsive-table tr { 
+    border: 1px solid #dee2e6; 
+    border-bottom: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    td {
+      border: none;
+      position: relative;
+      white-space: normal;
+      border-bottom: 1px solid #dee2e6;
+      text-align:left;
+
+      &:before {
+        content:attr(data-label);
+        display:block;
+        font-weight:bold;
+        text-transform:capitalize;
+        vertical-align:top;
+        width:30%;
+        text-align: left !important;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
