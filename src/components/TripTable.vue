@@ -92,7 +92,7 @@ export default {
       let endDuration = moment(json.duration.to).tz('Asia/Kuala_Lumpur').format("Do MMMM, YYYY[\n]HH:mm")
       this.$store.commit('changeStoreTrip', {key: 'startDuration', val: startDuration})
       this.$store.commit('changeStoreTrip', {key: 'endDuration', val: endDuration})
-      this.$store.commit('changeStoreTrip', {key: 'totalDistance', val: json.summary.distance})
+      this.$store.commit('changeStoreTrip', {key: 'totalDistance', val: json.summary.distance/1000})
       this.$store.commit('changeStoreTrip', {key: 'totalTrips', val: json.trips.length})
     },
     async addressLookup() {
